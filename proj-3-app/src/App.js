@@ -14,11 +14,10 @@ const App = () => {
     }
     getArtworks()
   }, [])
-
   return (
     <div className="App">
       <h1 className="title">Josef Albers: Color Study</h1>
-
+      <ArtList artworks={artworks} />
     </div>
   );
 }
