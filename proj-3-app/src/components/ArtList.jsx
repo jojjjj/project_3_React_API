@@ -8,7 +8,9 @@ const ArtList = (props) => {
                 props.artworks.map((artwork) => (
                     <div className="card" key={artwork.objectId}>
                         <img src={artwork.primaryImage} alt="josef albers artwork" />
-                        <h3>{artwork.title}</h3>
+                        <h2>{artwork.title}</h2>
+                        <h3>{artwork.artistDisplayName}</h3>
+                        <h4>{artwork.objectEndDate}</h4>
                     </div>
                 ))
             }
