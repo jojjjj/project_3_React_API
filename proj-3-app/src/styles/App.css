@@ -38,8 +38,7 @@
 } */
 
 body {
-  /* background: linear-gradient(135deg, rgb(0, 151, 88), rgb(0, 0, 134)) */
-  background: navy
+  background: white;
 }
 
 .App, .wow-container {
@@ -92,14 +91,15 @@ button:active {
 }
 
 .wow-container {
-  /* background: radial-gradient(rgba(255, 255, 255, 0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57)); */
-  background: whitesmoke;
+  background: linear-gradient(180deg, hsla(201, 100%, 68%, 1) 0%, hsla(0, 0%, 100%, 1) 80%);
   padding: 6em 4em;
   width: 26em;
   height: 22em;
   flex-direction: column;
   justify-content: flex-start;
   text-shadow: 0 0 0.5em rgba(0, 151, 88, 0.253);
+  border: 0.175em solid black;
+  border-radius: 0.5em;
 }
 
 @keyframes fadeIn {
