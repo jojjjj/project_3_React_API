@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="owen-header"></header>
       <main>
         <div className="wow-container">
           <h1>Wow!</h1>
@@ -26,6 +25,7 @@ const App = () => {
         </div>
         <button onClick={toggleWow}>{displayWow === false ? "New Wow" : "Clear Wow"}</button>
       </main>
+      <header className="owen-header"></header>
     </div>
   )
 }
