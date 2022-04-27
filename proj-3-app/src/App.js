@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(()=> {
     const getWows = async () => {
-      const res = await axios.get("https://owen-wilson-wow-api.herokuapp.com/wows/random?results=1")
+      const res = await axios.get("https://owen-wilson-wow-api.herokuapp.com/wows/ordered/0-0")
       setWows(res.data)
       console.log(res)
     }
@@ -39,7 +39,7 @@ const App = () => {
           <OwenWow displayWow={displayWow} />}
         </div>
         <button onClick={toggleWow}>{displayWow === false ? "Wow Me Please" : "Clear For More"}</button>
-        <div>
+        <div className="first-wows">
           <WowList wows={wows} />
         </div>
       </main>
