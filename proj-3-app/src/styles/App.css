@@ -37,59 +37,72 @@
   }
 } */
 
-button {
-  padding: 0.5em 1.2em;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  background-color: #64b5f6;
-  transition: all 0.2s ease;
-  font-weight: 700;
+body {
+  /* background: linear-gradient(135deg, rgb(0, 151, 88), rgb(0, 0, 134)) */
+  background: navy
 }
 
-button:hover {
-  background-color: #1e88e5;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-gap: 1em;
-  padding: 0.5em;
-}
-
-.card {
-  border-radius: 4px;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+.App, .wow-container {
   display: flex;
-  flex-direction: column;
+}
+
+.App {
   text-align: center;
   justify-content: space-between;
-  background-color: #424242;
-}
-
-.card button {
-  border-radius: 0 0 4px 4px;
-}
-
-.card img {
-  border-radius: 4px 4px 0 0;
-}
-
-.card,
-.content {
-  color: #e0e0e0;
-}
-
-.details .content {
-  /* padding: 1em 0; */
-  text-align: center;
-}
-
-.details button {
+  align-items: flex-start;
+  flex-wrap: wrap;
   margin: 1em;
+  padding: 1em;
+  /* border: 1em double rgb(0, 0, 0);
+  border-radius: 0.5em; */
 }
 
-.details img {
-  width: 100%;
+h2 {
+  text-align: left;
+  animation: fadeIn ease-in 0.5s;
 }
+
+button {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  background-color: darkgray;
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.25em black;
+}
+
+button:active {
+  box-shadow: inset 0 0 0.25em black;
+}
+
+.owen-header, .wow-container {
+  margin-bottom: 1em;
+  /* border-radius: 0.5em;
+  box-shadow: 0 0 0.25em black; */
+}
+
+.owen-header {
+  /* background-image: url('https://2.bp.blogspot.com/-hnZ6yew_b64/TZPKcRxPx2I/AAAAAAAAAiM/e9ZPok1tn1M/s1600/kanye-1.jpg'); */
+  background-size: cover;
+  width: 30em;
+  height: 36em;
+}
+
+.wow-container {
+  /* background: radial-gradient(rgba(255, 255, 255, 0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57),rgba(255, 255, 255, 0.53), rgba(255,255,255,0.57)); */
+  background: whitesmoke;
+  padding: 6em 4em;
+  width: 26em;
+  height: 22em;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-shadow: 0 0 0.5em rgba(0, 151, 88, 0.253);
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} 

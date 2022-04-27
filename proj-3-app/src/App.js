@@ -1,25 +1,33 @@
+import React, { useState } from 'react'
 import './styles/App.css'
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import ArtList from './components/ArtList'
+import OwenWow from './components/OwenWow'
 
 const App = () => {
-  const [artworks, setArtworks] = useState([])
+  const [displayWow, setDisplayWow] = useState(false)
 
-  useEffect(()=> {
-    const getArtworks = async () => {
-      const res = await axios.get("https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=Soft Edge-Hard Edge portfolio")
-      // setArtworks(res.data.results)
-      console.log(res)
-    }
-    getArtworks()
-  }, [])
+  const toggleWow = () => {
+      if (displayWow === false) {
+        setDisplayWow(true)
+      } else if (displayWow === true) {
+        setDisplayWow(false)
+      }
+  }
+
   return (
     <div className="App">
-      <h1 className="title">Josef Albers: Color Study</h1>
-      <ArtList artworks={artworks} />
+      <header className="owen-header"></header>
+      <main>
+        <div className="wow-container">
+          <h1>Wow!</h1>
+          {displayWow === false ? 
+          <h2>Need some wow? Look no further.</h2>
+          :
+          <OwenWow displayWow={displayWow} />}
+        </div>
+        <button onClick={toggleWow}>{displayWow === false ? "New Wow" : "Clear Wow"}</button>
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
