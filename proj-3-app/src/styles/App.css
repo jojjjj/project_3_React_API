@@ -27,6 +27,11 @@ p {
   font-size: 0.95em;
 }
 
+h3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+}
+
 button {
   padding: 0.5em 1em;
   font-weight: bold;
@@ -72,15 +77,19 @@ button {
 }
 
 .card {
-  background: linear-gradient(180deg, hsla(277, 22%, 81%, 1) 0%, hsla(0, 0%, 100%, 1) 80%);
+  background: radial-gradient(circle, hsla(48, 100%, 51%, 1) 0%, hsla(0, 0%, 100%, 1) 75%);
   padding: 5.5em 4em;
   width: 26em;
-  height: 22em;
+  height: 16em;
   flex-direction: column;
   justify-content: flex-start;
   border: 0.175em solid black;
   border-radius: 0.5em;
   margin-left: 0.8em;
+}
+
+.first-wows {
+  margin-top: 1.4em;
 }
 
 @keyframes fadeIn {
