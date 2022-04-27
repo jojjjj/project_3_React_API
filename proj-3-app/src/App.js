@@ -22,7 +22,7 @@ const App = () => {
             Hollywood's favorite troublemaker has gone on to say the word in 27 different movies for a total of 81 times. 
             Midnight in Paris holds the record for a whopping seven times.</p>
           {displayWow === false ? 
-          <h2>Are you ready for Wilson's WOW?</h2>
+          <h2>Ready for Wilson's WOW?</h2>
           :
           <OwenWow displayWow={displayWow} />}
         </div>
