@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles/App.css'
 import OwenWow from './components/OwenWow'
+import WowList from './components/WowList'
+import axios from 'axios'
 
 const App = () => {
   const [displayWow, setDisplayWow] = useState(false)
+  const [wows, setWows] = useState([])
 
   const toggleWow = () => {
       if (displayWow === false) {
@@ -12,6 +15,15 @@ const App = () => {
         setDisplayWow(false)
       }
   }
+
+  useEffect(()=> {
+    const getWows = async () => {
+      const res = await axios.get("https://owen-wilson-wow-api.herokuapp.com/wows/random?results=1")
+      setWows(res.data)
+      console.log(res)
+    }
+    getWows()
+  }, [])
 
   return (
     <div className="App">
@@ -27,6 +39,9 @@ const App = () => {
           <OwenWow displayWow={displayWow} />}
         </div>
         <button onClick={toggleWow}>{displayWow === false ? "Wow Me Please" : "Clear For More"}</button>
+        <div>
+          <WowList wows={wows} />
+        </div>
       </main>
       <header className="owen-header"></header>
     </div>

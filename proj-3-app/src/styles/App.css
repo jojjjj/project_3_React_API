@@ -68,6 +68,7 @@ button {
   justify-content: flex-start;
   border: 0.175em solid black;
   border-radius: 0.5em;
+  margin-left: 0.8em;
 }
 
 @keyframes fadeIn {
