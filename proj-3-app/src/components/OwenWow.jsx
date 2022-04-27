@@ -15,20 +15,6 @@ const OwenWow = (displayWow) => {
       getOwenWow()
     }, [displayWow])
 
-    // const getOwenWow = async () => {
-    //     try {
-    //     const res = await axios.get("https://owen-wilson-wow-api.herokuapp.com/wows/random")
-    //         console.log(res)
-    //         setWow(res.data[0].video["720p"])
-    //     } catch(err) {
-    //       console.log(err)
-    //     }
-    //   }
-
-    // useEffect(() => {
-    //     getOwenWow();
-    // }, [])
-
     return (
       <div className="details">
         <iframe

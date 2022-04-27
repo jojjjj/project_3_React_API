@@ -57,7 +57,7 @@ body {
 }
 
 h2 {
-  text-align: left;
+  text-align: center;
   animation: fadeIn ease-in 0.5s;
 }
 
@@ -99,7 +99,7 @@ button {
   height: 22em;
   flex-direction: column;
   justify-content: flex-start;
-  text-shadow: 0 0 0.5em rgba(0, 151, 88, 0.253);
+  text-shadow: 0 0 0.5em rgba(51, 51, 51, 0.253);
   border: 0.175em solid black;
   border-radius: 0.5em;
 }

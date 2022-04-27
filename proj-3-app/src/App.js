@@ -17,15 +17,16 @@ const App = () => {
     <div className="App">
       <main>
         <div className="wow-container">
-          <p>The actor Owen Wilson is Ever since Wilson said "wow" in his feature film debut in 1996's Bottlerocket, 
-            he has gone on to say the word in 27 different movies for a total of 81 times. Midnight in Paris holds
-            the record for a whopping seven times.</p>
+          <p>The actor Owen Wilson is known for more than a crooked nose and his oscar-worthy performance in the 2001 classic, Zoolander.
+            Ever since Wilson said "wow" in his feature film debut in 1996's Bottlerocket, 
+            Hollywood's favorite troublemaker has gone on to say the word in 27 different movies for a total of 81 times. 
+            Midnight in Paris holds the record for a whopping seven times.</p>
           {displayWow === false ? 
-          <h2>Are you ready for WOW?</h2>
+          <h2>Are you ready for Wilson's WOW?</h2>
           :
           <OwenWow displayWow={displayWow} />}
         </div>
-        <button onClick={toggleWow}>{displayWow === false ? "New Wow" : "Clear Wow"}</button>
+        <button onClick={toggleWow}>{displayWow === false ? "Wow Me Please" : "Clear For More"}</button>
       </main>
       <header className="owen-header"></header>
     </div>
