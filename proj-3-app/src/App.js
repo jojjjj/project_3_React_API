@@ -17,9 +17,11 @@ const App = () => {
     <div className="App">
       <main>
         <div className="wow-container">
-          <h1>Wow!</h1>
+          <p>The actor Owen Wilson is Ever since Wilson said "wow" in his feature film debut in 1996's Bottlerocket, 
+            he has gone on to say the word in 27 different movies for a total of 81 times. Midnight in Paris holds
+            the record for a whopping seven times.</p>
           {displayWow === false ? 
-          <h2>Need some wow? Look no further.</h2>
+          <h2>Are you ready for WOW?</h2>
           :
           <OwenWow displayWow={displayWow} />}
         </div>
